@@ -31,7 +31,7 @@ public class FrontControllerServletV5 extends HttpServlet {
 
     public FrontControllerServletV5() {
         initHandlerMappingMap();
-        intintHandlerAdapters();
+        initHandlerAdapters();
     }
 
     private void initHandlerMappingMap() {
@@ -46,7 +46,7 @@ public class FrontControllerServletV5 extends HttpServlet {
         handlerMappingMap.put("/front-controller/v5/v4/members", new MemberListControllerV4());
     }
 
-    private void intintHandlerAdapters() {
+    private void initHandlerAdapters() {
         handlerAdapters.add(new ControllerV3HandlerAdapter());
         handlerAdapters.add(new ControllerV4HandlerAdapter());
     }
