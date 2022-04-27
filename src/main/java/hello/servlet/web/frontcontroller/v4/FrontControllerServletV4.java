@@ -33,7 +33,7 @@ public class FrontControllerServletV4 extends HttpServlet {
         String requestURI = request.getRequestURI();
 
         ControllerV4 controller = controllerMap.get(requestURI);
-        if(controller == null) {
+        if (controller == null) {
             response.setStatus(HttpServletResponse.SC_NOT_FOUND);
             return;
         }
