@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name ="memberFormServlet", urlPatterns = "/servlet/members/new-form")
+@WebServlet(name = "memberFormServlet", urlPatterns = "/servlet/members/new-form")
 public class MemberFormServlet extends HttpServlet {
 
     private MemberRepository memberRepository = MemberRepository.getInstance();
@@ -21,7 +21,7 @@ public class MemberFormServlet extends HttpServlet {
         response.setContentType("text/html");
         response.setCharacterEncoding("utf-8");
 
-        PrintWriter w= response.getWriter();
+        PrintWriter w = response.getWriter();
         w.write("<!DOCTYPE html>\n" +
                 "<html>\n" +
                 "<head>\n" +
