@@ -57,7 +57,7 @@ public class FrontControllerServletV5 extends HttpServlet {
 
         // 핸들러 찾기
         Object handler = getHandler(request);
-        if(handler == null) {
+        if (handler == null) {
             response.setStatus(HttpServletResponse.SC_NOT_FOUND);
             return;
         }
@@ -80,7 +80,7 @@ public class FrontControllerServletV5 extends HttpServlet {
 
     private MyHandlerAdapter getHandlerAdapter(Object handler) throws IllegalAccessException {
         for (MyHandlerAdapter adapter : handlerAdapters) {
-            if(adapter.supports(handler)) {
+            if (adapter.supports(handler)) {
                 return adapter;
             }
         }
